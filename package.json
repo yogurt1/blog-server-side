@@ -16,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/dbarabashdev/blog-server-side/issues"
   },
-  "homepage": "https://github.com/dbarabashdev/blog-server-side#readme"
+  "homepage": "https://github.com/dbarabashdev/blog-server-side#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "mongoose": "^4.9.2",
+    "morgan": "^1.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-preset-stage-3": "^6.22.0"
+  }
 }
