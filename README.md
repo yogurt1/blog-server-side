@@ -1,1 +1,1 @@
-Server side for blog
+Server side for blog app
