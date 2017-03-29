@@ -4,14 +4,14 @@
   "description": "Server side for blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dbarabashdev/blog-server-side.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodejs", "mongoose", "mongodb"],
+  "author": "dbarabashdev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dbarabashdev/blog-server-side/issues"
