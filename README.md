@@ -1,1 +1,1 @@
-# blog-server-sider
+Server side for blog
