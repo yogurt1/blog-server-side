@@ -3,10 +3,18 @@ import mongoose from 'mongoose';
 import session from 'express-session';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import bluebird from 'bluebird';
 
 import config from './config';
+import authRoute from './routes/auth';
 
 const app = express();
+
+mongoose.Promise = bluebird;
+mongoose.connect(config.database, err => {
+  if (err) throw err;
+   console.log('Mongo connected!');
+});
 
 app.listen(config.port, err => {
     if (err) throw err;
@@ -23,6 +31,4 @@ app.use(session({
   secret: config.secret
 }));
 
-app.get('*', async (req, res) => {
-  res.end('Hello Server');
-});
+app.use('/api', authRoute);

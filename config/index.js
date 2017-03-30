@@ -1,5 +1,5 @@
 const config = {
-  database: '',
+  database: 'localhost/blog',
   port: 3000,
   secret: 'secretkey'
 };

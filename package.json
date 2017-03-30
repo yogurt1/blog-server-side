@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/dbarabashdev/blog-server-side.git"
   },
-  "keywords": ["nodejs", "mongoose", "mongodb"],
+  "keywords": [
+    "nodejs",
+    "mongoose",
+    "mongodb"
+  ],
   "author": "dbarabashdev",
   "license": "ISC",
   "bugs": {
@@ -18,6 +22,8 @@
   },
   "homepage": "https://github.com/dbarabashdev/blog-server-side#readme",
   "dependencies": {
+    "bcrypt-as-promised": "^1.1.0",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
