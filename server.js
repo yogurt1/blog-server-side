@@ -1,3 +1,5 @@
+import https from 'https';
+import fs from 'fs';
 import express from 'express';
 import mongoose from 'mongoose';
 import session from 'express-session';
@@ -16,12 +18,6 @@ mongoose.connect(config.database, err => {
    console.log('Mongo connected!');
 });
 
-app.listen(config.port, err => {
-    if (err) throw err;
-
-    console.log(`Server listening on port ${config.port}`);
-});
-
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,3 +28,13 @@ app.use(session({
 }));
 
 app.use('/api', authRoute);
+
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
+
+https.createServer(options, (req, res) => {
+  res.writeHead(200);
+  res.end('hello world\n');
+}).listen(8000);
