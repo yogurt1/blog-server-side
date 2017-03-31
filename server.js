@@ -34,7 +34,8 @@ const options = {
   cert: fs.readFileSync('cert.pem')
 };
 
-https.createServer(options, (req, res) => {
-  res.writeHead(200);
-  res.end('hello world\n');
-}).listen(8000);
+https.createServer(options, app).listen(config.port, (err) => {
+  if (err) throw err;
+
+  console.log(`Server listening on port ${config.port}`);
+});
